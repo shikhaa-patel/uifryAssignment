@@ -25,21 +25,28 @@ import banner from "./banner/banner.png";
 
 const App = () => {
   return (
-    <div className="w-full justify-center flex flex-col ">
+    <div className="w-full justify-center flex flex-col overflow-hidden ">
       <nav className="mt-[40px] flex flex-col md:flex-row w-[340px] sm:w-[450px]  md:w-[1090px] md:h-[60px] items-center justify-between self-center relative pl-2">
-        <img src={bstar} className="absolute right-[-100px] top-8"></img>
+        <img
+          src={bstar}
+          className="absolute right-[-100px] top-8 hidden lg:flex"
+        ></img>
         <ul className="md:flex md:flex-row grid grid-cols-3   w-full items-center ">
           <div className="flex flex-row justify-center items-center">
             <img src={fire} className="w-[34px] h-[34px]"></img>
             <li className="text-[30px] font-bold mr-[40px]">uifry</li>
           </div>
-          <li className="text-[20px] font-[500] mr-6 hover:font-[800] ">Home</li>
-          <li className="text-[20px] font-[500] mr-6">About Us</li>
+          <li className="text-[20px] font-bold mr-6 text-[#FF5555] ">
+            <a href="#home">Home</a>
+          </li>
+          <li className="text-[20px] font-[500] mr-6">
+            <a href="#aboutus">About Us</a>
+          </li>
           <li className="text-[20px] font-[500] xsm:ml-16 md:ml-0 mr-6">
-            Pricing
+            <a href="#pricing">Pricing</a>
           </li>
           <li className="text-[20px] font-[500] mr-6 xsm:ml-16 md:ml-0 ">
-            Features
+            <a href="#features">Features</a>
           </li>
         </ul>
         <button className="bg-black text-white w-[320px] h-[40px] mt-4 md:w-[180px] md:h-[60px] mr-20 hover:font-bold hover:bg-slate-700 md:mt-0 ml-[75px] md:ml-0 ">
@@ -47,20 +54,30 @@ const App = () => {
         </button>
       </nav>
 
-      <div className="herosection flex  md:w-[1090px] w-[340px] sm:w-[450px]  justify-center self-center md:flex-row flex-col relative mt-24 md:mt-[115px]">
+      {/* ----------------------------------  HERO SECTION-------------------- */}
+      <div
+        id="home"
+        className="herosection flex  md:w-[1090px] w-[340px] sm:w-[450px]  justify-center self-center md:flex-row flex-col relative mt-24 md:mt-[115px]"
+      >
         <img
           src={rings}
           className="md:absolute  right-[-70px] w-[550px] h-[751px] top-[-130px] rotate-[-15deg] hidden md:flex  "
         ></img>
-        <img src={sstar} className="absolute left-40 bottom-64 "></img>
-        <img src={sstar} className="absolute right-96 bottom-40 z-10"></img>
+        <img
+          src={sstar}
+          className="absolute left-40 bottom-64 hidden lg:flex"
+        ></img>
+        <img
+          src={sstar}
+          className="absolute right-96 bottom-40 z-10 hidden lg:flex"
+        ></img>
         <img
           src={gradient2}
           className="absolute left-4 top-[-260px] w-[527px] h-[550px]"
         ></img>
         <img
           src={gradient2}
-          className="absolute right-20 bottom-[-90px] w-[527px] h-[550px]"
+          className="absolute right-20 bottom-[-90px] w-[527px] h-[550px] hidden lg:flex"
         ></img>
         <div className="details flex flex-col md:w-1/2 w-[340px] sm:w-[450px]  ">
           <h1 className="md:text-[64px] text-[40px] font-bold text-black md:w-full z-10">
@@ -104,20 +121,27 @@ const App = () => {
         </div>
       </div>
 
-      <div className=" features px-0 relative w-full flex justify-center">
+      {/* ----------------------------------  FEATURES SECTION-------------------- */}
+      <div
+        id="features"
+        className=" features px-0 relative w-full flex justify-center"
+      >
         <div className=" flex md:flex-row flex-col  md:w-[1090px] justify-center self-center  mt-16">
           <img
             src={rings}
             className="md:absolute left-28 w-[530px] h-[751px] top-0 rotate-[-15deg] z-0 hidden md:flex "
           ></img>
-          <img src={sstar} className="absolute left-16 top-48 "></img>
+          <img
+            src={sstar}
+            className="absolute left-16 top-48 hidden lg:flex "
+          ></img>
           <img
             src={gradient2}
             className="absolute left-12 top-20 w-[527px] h-[550px] -z-10"
           ></img>
           <img
             src={gradient}
-            className="absolute right-0 top-44 w-[327px] h-[600px]"
+            className="absolute right-0 top-44 w-[327px] h-[600px] "
           ></img>
           <div className="image md:w-1/2 w-[360px]  flex justify-center justify-self-center ">
             <img src={img5} className="rotate-0 justify-self-center"></img>
@@ -161,16 +185,23 @@ const App = () => {
         </div>
       </div>
 
+      {/* ----------------------------------  GALLERY-------------------- */}
       <div className="gallery flex md:flex-row-reverse flex-col    md:w-[1090px] justify-center self-center relative items-center">
         <img
           src={rings}
           className="md:absolute right-16 w-[550px] h-[751px] top-[-80px] rotate-[-15deg] hidden md:flex  "
         ></img>
-        <img src={sstar} className="absolute right-4 top-4 "></img>
-        <img src={sstar} className="absolute right-100 bottom-16 "></img>
+        <img
+          src={sstar}
+          className="absolute right-4 top-4 hidden lg:flex"
+        ></img>
+        <img
+          src={sstar}
+          className="absolute right-100 bottom-16 hidden lg:flex"
+        ></img>
         <img
           src={gradient2}
-          className="absolute right-72 top-28 w-[327px] h-[500px]"
+          className="absolute right-72 top-28 w-[327px] h-[500px] "
         ></img>
         <div className="image md:w-1/2 flex justify-center justify-self-center xsm:ml-16 md:ml-0">
           <img src={img5} className="rotate-0 justify-self-center"></img>
@@ -201,10 +232,13 @@ const App = () => {
           src={rings}
           className="md:absolute left-[-75px] w-[550px] h-[751px] top-[-50px] rotate-[-15deg] xsm:hidden md:flex "
         ></img>
-        <img src={sstar} className="absolute right-20 bottom-28 "></img>
+        <img
+          src={sstar}
+          className="absolute right-20 bottom-28 hidden lg:flex"
+        ></img>
         <img
           src={gradient2}
-          className="absolute left-56  top-28 w-[327px] h-[500px]"
+          className="absolute left-56  top-28 w-[327px] h-[500px] hidden lg:flex "
         ></img>
         <div className="image md:w-1/2 xsm:w-[340px] flex justify-center justify-self-center">
           <img src={img5} className="rotate-0 justify-self-center"></img>
@@ -228,7 +262,11 @@ const App = () => {
         </div>
       </div>
 
-      <div className="testimonials flex flex-col   lg:w-[1090px] justify-center self-center relative">
+      {/* ---------------------------------- TESTIMONIALS-------------------- */}
+      <div
+        id="aboutus"
+        className="testimonials flex flex-col   lg:w-[1090px] justify-center self-center relative"
+      >
         <img
           src={gradient2}
           className="absolute left-12  top-64 w-[327px] h-[400px]"
@@ -263,8 +301,15 @@ const App = () => {
         </div>
       </div>
 
-      <div className="subscription flex flex-col   lg:w-[1090px] justify-center self-center mt-[68px] relative">
-        <img src={bstar} className="absolute right-[450px] top-28 "></img>
+      {/* ----------------------------------  PRICES-------------------- */}
+      <div
+        id="pricing"
+        className="subscription flex flex-col   lg:w-[1090px] justify-center self-center mt-[68px] relative"
+      >
+        <img
+          src={bstar}
+          className="absolute right-[450px] top-28 hidden lg:flex"
+        ></img>
         <img
           src={gradient2}
           className="absolute left-[-160px] bottom-[-360px] w-[327px] h-[400px]"
@@ -285,7 +330,7 @@ const App = () => {
               ultricies. In ultrices malesuada elit mauris.
             </p>
           </div>
-          <div className="xsm:w-[340px] sm:w-[450px]   md:w-[535px] h-[181px] flex flex-col justify-center   p-[31px] hover:shadow-2xl  hover:shadow-slate-500 ">
+          <div className="xsm:w-[340px] sm:w-[450px]    md:w-[535px] h-[181px] flex flex-col justify-center   p-[31px] hover:shadow-2xl  hover:shadow-slate-500 ">
             <h4 className="md:text-[28px] font-[600] xsm:text-[20px]">
               The Best Financial Accounting App Ever!
             </h4>
@@ -294,25 +339,25 @@ const App = () => {
               ultricies. In ultrices malesuada elit mauris.
             </p>
           </div>
-          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center   p-[31px] hover:shadow-2xl  hover:shadow-slate-500">
+          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center bg-[#FF5555] lg:bg-white text-white lg:text-black   p-[31px] hover:shadow-2xl  hover:shadow-slate-500">
             <h4 className="text-[28px] font-[600] xsm:text-[20px]">
               The Best Financial Accounting App Ever!
             </h4>
-            <p className="text-[18px] font-[500] opacity-50 ">
+            <p className="text-[18px] font-[500] lg:opacity-50 ">
               “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
               ultricies. In ultrices malesuada elit mauris.
             </p>
           </div>
-          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center bg-[#FF5555] p-[31px] text-white hover:shadow-2xl  hover:shadow-slate-500">
+          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center lg:bg-[#FF5555] bg-white  p-[31px] lg:text-white hover:shadow-2xl  hover:shadow-slate-500">
             <h4 className="text-[28px] font-[600] xsm:text-[20px]">
               The Best Financial Accounting App Ever!
             </h4>
-            <p className="text-[18px] font-[500]  ">
+            <p className="text-[18px] font-[500]  opacity-50 lg:opacity-100">
               “Arcu at dictum sapien, mollis. Vulputate sit id accumsan,
               ultricies. In ultrices malesuada elit mauris.
             </p>
           </div>
-          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center bg-[#FF5555] p-[31px] text-white hover:shadow-2xl  hover:shadow-slate-500">
+          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center bg-[#FF5555]  p-[31px] text-white hover:shadow-2xl  hover:shadow-slate-500">
             <h4 className="text-[28px] font-[600] xsm:text-[20px]">
               The Best Financial Accounting App Ever!
             </h4>
@@ -321,7 +366,7 @@ const App = () => {
               ultricies. In ultrices malesuada elit mauris.
             </p>
           </div>
-          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center  p-[31px]  hover:shadow-2xl  hover:shadow-slate-500">
+          <div className="md:w-[535px] xsm:w-[340px] sm:w-[450px]  h-[181px] flex flex-col justify-center bg-white  p-[31px]  hover:shadow-2xl  hover:shadow-slate-500">
             <h4 className="text-[28px] font-[600] xsm:text-[20px]">
               The Best Financial Accounting App Ever!
             </h4>
@@ -334,11 +379,18 @@ const App = () => {
       </div>
 
       <div className="banner flex justify-center self-center xsm:w-[340px] xsm:h-[250px] sm:w-[450px] sm:h-[300px]  lg:w-[1090px] lg:h-[508px] mt-[155px] relative ">
-        <img src={sstar} className="absolute left-[-100px] top-32 "></img>
-        <img src={bstar} className="absolute right-[-100px] top-[-80px] "></img>
+        <img
+          src={sstar}
+          className="absolute left-[-100px] top-32 hidden lg:flex"
+        ></img>
+        <img
+          src={bstar}
+          className="absolute right-[-100px] top-[-80px] hidden lg:flex"
+        ></img>
         <img src={banner} className="w-full hover:scale-105"></img>
       </div>
 
+      {/* ---------------------------------- CONTACT DETAILS-------------------- */}
       <div className="contact xsm:w-[360px]  flex flex-col sm:w-[450px]   lg:w-[1090px] justify-center self-center text-left md:mt-[155px] mt-20">
         <footer>
           <div className="container mx-auto md:flex md:flex-row justify-between xsm:grid sm:grid-cols-2">
@@ -386,7 +438,7 @@ const App = () => {
               <ul>
                 <li className="mb-2">
                   <a
-                    href="#"
+                    href="#home"
                     className=" text-[16px] font-semibold hover:text-[18px]"
                   >
                     Home
@@ -394,7 +446,7 @@ const App = () => {
                 </li>
                 <li className="mb-2">
                   <a
-                    href="#"
+                    href="#aboutus"
                     className=" text-[16px] font-semibold hover:text-[18px]"
                   >
                     About Us
@@ -402,7 +454,7 @@ const App = () => {
                 </li>
                 <li className="mb-2">
                   <a
-                    href="#"
+                    href="#pricing"
                     className=" text-[16px] font-semibold hover:text-[18px]"
                   >
                     Bookings
@@ -410,7 +462,7 @@ const App = () => {
                 </li>
                 <li className="mb-2">
                   <a
-                    href="#"
+                    href="#features"
                     className=" text-[16px] font-semibold hover:text-[18px]"
                   >
                     Blog
@@ -504,66 +556,9 @@ const App = () => {
           </div>
           <hr className="mt-[92px] mb-[39px]"></hr>
           <div className="text-center mt-8 text-sm text-gray-500 mb-[39px]">
-            &copy; Copyright 2022 Uifry.Com All Rights Reserved
+            Copyright 2022 Uifry.Com All Rights Reserved
           </div>
         </footer>
-        {/* <table class="table-auto">
-          <thead>
-            <tr className="mb-[16px]">
-              <th className="flex flex-row  items-center text-[32px] font-semibold ">
-                <img src={fire} className="w-[26px] h-[26px] mr-1 "></img>uifry
-              </th>
-              <th className="text-[32px] font-semibold">Links</th>
-              <th className="text-[32px] font-semibold">Legal</th>
-              <th className="text-[32px] font-semibold">Product</th>
-              <th className="text-[32px] font-semibold">Newsletter</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="flex flex-row  text-[16px] font-semibold">
-                <img src={email} className="w-[24px] h-[24px] mr-1 "></img>
-                help@frybix.com
-              </td>
-              <td className="text-[16px] font-semibold">Home</td>
-              <td className="text-[16px] font-semibold">Terms Of Use</td>
-              <td className="text-[16px] font-semibold">Take Tour</td>
-              <td className="text-[16px] font-semibold">Stay Up To Date</td>
-            </tr>
-            <tr>
-              <td className="flex flex-row  text-[16px] font-semibold">
-                <img src={phone} className="w-[24px] h-[24px] mr-1 "></img>
-                +123445667889
-              </td>
-              <td className="text-[16px] font-semibold">About Us</td>
-              <td className="text-[16px] font-semibold">About Us</td>
-              <td className="text-[16px] font-semibold">Live Chat</td>
-              <td className="row-span-2  flex flex-row justify-center items-center text-center bg-green-400">
-                <div className=""> Your Email</div>
-                <div className="bg-black text-white "> Subscribe </div>
-              </td>
-            </tr>
-            <tr>
-              <td> </td>
-              <td className="text-[16px] font-semibold">Bookings</td>
-              <td className="text-[16px] font-semibold">Cookie Policy</td>
-              <td className="text-[16px] font-semibold">Reveiws</td>
-              <td> </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td className="text-[16px] font-semibold">Blog</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <hr className="mt-[92px] mb-[39px]"></hr>
-        <p className="mb-[39px] text-[16px] font-semibold self-center">
-          Copyright 2022 uifry.com All Rights Reserved
-        </p> */}
       </div>
     </div>
   );

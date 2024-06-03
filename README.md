@@ -3,3 +3,4 @@
 ->  Features: Responsive
               Have hover effects on links 
               Have shadow effects
+->  Deployed link: https://uifry-shikha.netlify.app
